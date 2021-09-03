@@ -108,24 +108,32 @@ void ViewAble::RunViewAble()
   // printf("%f, %f\n", cx, cy);
   // Define the viewAble's bounding destination rectangle.
   SDL_Rect const destinationRect{
-    x : (int)(camera->GetViewDimX() * (cx - dim.x * 0.5)), //cx
-    y : (int)(camera->GetViewDimY() * (cy - dim.y * 0.5)), //cy
-    w : (int)(camera->GetViewDimX() * dim.x),
-    h : (int)(camera->GetViewDimY() * dim.y)
-  };
+      (int)(camera->GetViewDimX() * (cx - dim.x * 0.5)), //cx
+      (int)(camera->GetViewDimY() * (cy - dim.y * 0.5)), //cy
+      (int)(camera->GetViewDimX() * dim.x),
+      (int)(camera->GetViewDimY() * dim.y)};
+  // SDL_Rect const destinationRect{
+  //     (int)(camera->GetViewDimX() * (cx - dim.x * 0.5)), //cx
+  //     (int)(camera->GetViewDimY() * (cy - dim.y * 0.5)), //cy
+  //     300,
+  //     100};
   // printf("%d, %d, %d, %d\n", destinationRect.x, destinationRect.y, destinationRect.w, destinationRect.h);
   // Draw the viewAble.
   // printf("player.pos.x = %f\n", pos.x);
   // printf("player.pos.y = %f\n", pos.y);
   // printf("camera.pos.x = %f\n", camera->GetPosX());
   // printf("camera.pos.y = %f\n", camera->GetPosY());
-  printf("cx           = %f\n", cx);
-  printf("cy           = %f\n", cy);
-  printf("rect.x       = %d\n", destinationRect.x);
-  printf("rect.y       = %d\n", destinationRect.y); //y is too high, cy/y look ok
-  printf("rect.w       = %d\n", destinationRect.w);
-  printf("rect.h       = %d\n", destinationRect.h);
-  printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  // printf("viewdimx     = %f\n", camera->GetViewDimX());
+  // printf("viewdimy     = %f\n", camera->GetViewDimY());
+  // printf("player.dim.x = %f\n", dim.x);
+  // printf("player.dim.y = %f\n", dim.y);
+  // printf("cx           = %f\n", cx);
+  // printf("cy           = %f\n", cy);
+  // printf("rect.x       = %d\n", destinationRect.x);
+  // printf("rect.y       = %d\n", destinationRect.y); //y is too high, cy/y look ok
+  // printf("rect.w       = %d\n", destinationRect.w);
+  // printf("rect.h       = %d\n", destinationRect.h);
+  // printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 
   if (SDL_RenderCopyEx(
           renderer, texture, sourceRect, &destinationRect,

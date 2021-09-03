@@ -126,7 +126,7 @@ namespace Game::Config
 
             float const
                 WALKING_SPEED =
-                    0.000075;
+                    0.0075;
             //TODO: adjust speeds.
 
             float const

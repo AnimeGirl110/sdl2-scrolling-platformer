@@ -50,17 +50,16 @@ Player::~Player()
 
 void Player::RunKeyAble()
 {
-  int rotation = 0;
+  int translation = 0;
   if (KeyAble::keyState[KEY_LEFT])
   {
-    // Rotate counter-clockwise.
+    --translation;
   }
-  if (KeyAble::keyState[KEY_JUMP])
+  if (KeyAble::keyState[KEY_RIGHT])
   {
-    // Rotate clockwise.
-    ++rotation;
+    ++translation;
   }
-  // RotateAble::SetVel(rotation * VEL_A);
+  TranslateAble::SetVelX(translation * WALKING_SPEED);
 
   if (KeyAble::keyState[KEY_JUMP])
   {

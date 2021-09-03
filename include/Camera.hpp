@@ -28,9 +28,9 @@ namespace Game
     // Get y-position.
     float GetPosY() { return pos.y; }
 
-    float GetViewDimX() { return viewDimY; }
+    float GetViewDimX() { return viewDimX; }
     // Get view's y-dimension.
-    float GetViewDimY() { return viewDimX; }
+    float GetViewDimY() { return viewDimY; }
 
     // Resizes camera based on screen's dim.
     void Resize(int width, int height);

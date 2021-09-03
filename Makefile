@@ -56,7 +56,7 @@ $(PUB_DIR) $(OBJ_DIR):
 
 # MAKE CLEAN
 clean:
-	@$(RM) -rv $(PUB_DIR) $(OBJ_DIR)
+	rmdir $(PUB_DIR) $(OBJ_DIR) /S /Q
 
 # MAKE GIT
 git:

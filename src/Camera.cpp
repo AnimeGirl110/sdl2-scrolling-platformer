@@ -38,5 +38,6 @@ void Camera::RunModelAble()
   // RotateAble::RunModelAble();
   // TranslateAble::RunModelAble();
   SetPosX(player->GetPosX() + 0.17f);
+  // SetPosX(0.5);
   // SetPosY(player->GetPosY());
 }

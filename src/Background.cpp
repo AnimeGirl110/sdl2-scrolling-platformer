@@ -26,6 +26,7 @@ Background::~Background()
   // Delete the background's source rectangle.
   if (sourceRect)
   {
+    //ahrarhgak
     printf("\n  - DELETE BACKGROUND'S SOURCE RECT\n");
     delete sourceRect;
     sourceRect = nullptr;

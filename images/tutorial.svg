@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="10000"
+   height="1000"
+   viewBox="0 0 2645.8332 264.58334"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1">
+    <rect
+       style="fill:#ff0000;stroke-width:0.264583"
+       id="rect37"
+       width="128.70001"
+       height="109.48234"
+       x="-1.1647059"
+       y="157.81766"
+       type="ground" />
+    <rect
+       style="fill:#ff0000;stroke-width:0.167201"
+       id="rect37-5"
+       width="115.0299"
+       height="48.917633"
+       x="255.07059"
+       y="157.81766"
+       type="ground" />
+    <rect
+       style="fill:#ff0000;stroke-width:0.188702"
+       id="rect37-5-4"
+       width="146.51534"
+       height="48.917633"
+       x="540.52313"
+       y="153.15884"
+       type="ground" />
+    <rect
+       style="fill:#ff0000;stroke-width:0.135431"
+       id="rect37-5-4-6"
+       width="75.468277"
+       height="48.917633"
+       x="1089.8199"
+       y="186.93529"
+       type="ground" />
+    <rect
+       style="fill:#ff0000;stroke-width:0.135431"
+       id="rect37-5-4-6-5"
+       width="75.468277"
+       height="48.917633"
+       x="1386.1187"
+       y="160.72942"
+       type="ground" />
+    <rect
+       style="fill:#00ffff;stroke-width:0.264583"
+       id="rect39"
+       width="87.352943"
+       height="11.064706"
+       x="411.72357"
+       y="156.65295"
+       type="platform" />
+    <rect
+       style="fill:#000080;stroke-width:0.264583"
+       id="rect153"
+       width="32.029415"
+       height="28.535294"
+       x="6.4058833"
+       y="93.176476"
+       type="checkpoint" />
+    <rect
+       style="fill:#000080;stroke-width:0.264583"
+       id="rect153-2"
+       width="32.029415"
+       height="28.535294"
+       x="1121.6117"
+       y="138.01762"
+       type="checkpoint" />
+    <rect
+       style="fill:#ff00ff;stroke-width:0.264583"
+       id="rect903"
+       width="127.53528"
+       height="22.1294"
+       x="127.53531"
+       y="157.81766"
+       type="bConveyorBelt" />
+    <rect
+       style="fill:#1a1a1a;stroke-width:0.264583"
+       id="rect927"
+       width="11.647074"
+       height="20.382364"
+       x="340.98285"
+       y="138.01765"
+       type="tJump" />
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect927-0"
+       width="11.647074"
+       height="20.382364"
+       x="606.91138"
+       y="132.77647"
+       type="tSprintjump" />
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect927-0-6-1"
+       width="11.647074"
+       height="20.382364"
+       x="1153.6411"
+       y="166.55292"
+       type="tFighting" />
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect927-0-6-1-3"
+       width="11.647074"
+       height="20.382364"
+       x="1408.1295"
+       y="140.63821"
+       type="tAbilities" />
+    <rect
+       style="fill:#1a1a1a;stroke-width:0.264583"
+       id="rect927-2"
+       width="11.647074"
+       height="20.382364"
+       x="90.847054"
+       y="137.43529"
+       type="tDash" />
+    <rect
+       style="fill:#241c1c;stroke-width:0.264583"
+       id="rect78"
+       width="87.352936"
+       height="12.229411"
+       x="997.46698"
+       y="187.51764"
+       type="movingPlatform" />
+    <rect
+       style="fill:#00ffff;stroke-width:0.430541"
+       id="rect953"
+       width="144.42348"
+       height="29.117235"
+       x="1180.4294"
+       y="154.32352"
+       type="platform" />
+    <rect
+       style="fill:#8a6f91;stroke-width:0.264583"
+       id="rect977"
+       width="24.458735"
+       height="20.382345"
+       x="1235.7529"
+       y="133.94118"
+       type="enemy" />
+    <rect
+       style="fill:#8a6f91;stroke-width:0.264583"
+       id="rect977-7"
+       width="24.458735"
+       height="20.382345"
+       x="1589.2412"
+       y="140.92943"
+       type="enemy" />
+    <rect
+       style="fill:#8a6f91;stroke-width:0.264583"
+       id="rect977-7-9"
+       width="24.458735"
+       height="20.382345"
+       x="1705.7119"
+       y="209.93823"
+       type="enemy" />
+    <rect
+       style="fill:#8a6f91;stroke-width:0.264583"
+       id="rect977-7-9-8"
+       width="24.458735"
+       height="20.382345"
+       x="1757.5413"
+       y="209.93823"
+       type="enemy" />
+    <rect
+       style="fill:#008000;stroke-width:0.264583"
+       id="rect1934"
+       width="13.97647"
+       height="17.470589"
+       x="1432.0059"
+       y="115.30588"
+       type="abilityDropper" />
+    <rect
+       style="fill:#00ffff;stroke-width:0.41635"
+       id="rect2166"
+       width="107.73529"
+       height="30.28194"
+       x="1505.9646"
+       y="161.31177"
+       type="platform" />
+    <rect
+       style="fill:#241c1c;stroke-width:0.321997"
+       id="rect2166-2"
+       width="159.5647"
+       height="12.229"
+       x="1634.9558"
+       y="230.32079"
+       type="platform" />
+    <rect
+       style="fill:#ff0000;stroke-width:0.264583"
+       id="rect2699"
+       width="91.379501"
+       height="46.879627"
+       x="1799.5205"
+       y="229.73802"
+       type="platform" />
+    <rect
+       style="fill:#000080;stroke-width:0.264583"
+       id="rect153-2-1"
+       width="32.029415"
+       height="28.535294"
+       x="1835.2853"
+       y="174.4147"
+       type="1checkpoint" />
+    <rect
+       style="fill:#00ffff;stroke-width:0.264583"
+       id="rect2789"
+       width="105.98824"
+       height="12.811765"
+       x="1928.1705"
+       y="198.58235"
+       type="platform" />
+    <rect
+       style="fill:#0000ff;stroke-width:0.264583"
+       id="rect3629"
+       width="36.688236"
+       height="93.75882"
+       x="2284.5706"
+       y="78.035294"
+       type="levelDoor" />
+    <rect
+       style="fill:#1a1a1a;stroke-width:0.264583"
+       id="rect927-2-3"
+       width="11.647074"
+       height="20.382364"
+       x="2133.7412"
+       y="151.70294"
+       type="tDash" />
+  </g>
+</svg>

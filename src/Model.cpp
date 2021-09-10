@@ -201,15 +201,15 @@ void Model::MakeInitialActors()
 
   // Create the world, using the screen's full dimensions as recorded.
 
-  // printf("\n  + NEW WORLD\n");
+  printf("\n  + NEW WORLD\n");
   //TODO: Calculate size of worlds (PERCENTS %)
-  // world = new World(1.0f, 1.0f);
+  world = new World(1.0f, 1.0f);
   // Inform all actors of their world.
-  // Actor::SetWorld(world);
+  Actor::SetWorld(world);
 
   // Create the game's background.
-  // printf("\n  + NEW BACKGROUND\n");
-  // background = new Background();
+  printf("\n  + NEW BACKGROUND\n");
+  background = new Background();
 
   // Create the player.
   printf("\n  + NEW PLAYER\n");
@@ -222,6 +222,7 @@ void Model::MakeInitialActors()
   camera = new Camera(0, 0.5f, 0, 1.0f, 1.0f, player);
   // Inform mvc of the camera. Mvc passes it to view, which passes to viewAbles.
   mvc->SetCamera(camera);
+  background->pastPosX = camera->GetPosX();
 
   // Create the scaffolder.
   // printf("\n  + NEW SCAFFOLDER\n");

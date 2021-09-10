@@ -57,12 +57,12 @@ namespace Game::Config
 
             int const
                 IMAGE_HEIGHT =
-                    1969;
+                    848;
             // Specified in pixels.
 
             int const
                 IMAGE_WIDTH =
-                    3500;
+                    3685;
             // Specified in pixels.
 
             // float const
@@ -100,11 +100,11 @@ namespace Game::Config
 
             Uint8 const
                 KEY_RIGHT =
-                    SDL_SCANCODE_A;
+                    SDL_SCANCODE_D;
 
             Uint8 const
                 KEY_LEFT =
-                    SDL_SCANCODE_D;
+                    SDL_SCANCODE_A;
 
             Uint8 const
                 KEY_JUMP =

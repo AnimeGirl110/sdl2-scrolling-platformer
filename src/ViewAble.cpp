@@ -112,29 +112,6 @@ void ViewAble::RunViewAble()
       (int)(camera->GetViewDimY() * (cy - dim.y * 0.5)), //cy
       (int)(camera->GetViewDimX() * dim.x),
       (int)(camera->GetViewDimY() * dim.y)};
-  // SDL_Rect const destinationRect{
-  //     (int)(camera->GetViewDimX() * (cx - dim.x * 0.5)), //cx
-  //     (int)(camera->GetViewDimY() * (cy - dim.y * 0.5)), //cy
-  //     300,
-  //     100};
-  // printf("%d, %d, %d, %d\n", destinationRect.x, destinationRect.y, destinationRect.w, destinationRect.h);
-  // Draw the viewAble.
-  // printf("player.pos.x = %f\n", pos.x);
-  // printf("player.pos.y = %f\n", pos.y);
-  // printf("camera.pos.x = %f\n", camera->GetPosX());
-  // printf("camera.pos.y = %f\n", camera->GetPosY());
-  // printf("viewdimx     = %f\n", camera->GetViewDimX());
-  // printf("viewdimy     = %f\n", camera->GetViewDimY());
-  // printf("player.dim.x = %f\n", dim.x);
-  // printf("player.dim.y = %f\n", dim.y);
-  // printf("cx           = %f\n", cx);
-  // printf("cy           = %f\n", cy);
-  // printf("rect.x       = %d\n", destinationRect.x);
-  // printf("rect.y       = %d\n", destinationRect.y); //y is too high, cy/y look ok
-  // printf("rect.w       = %d\n", destinationRect.w);
-  // printf("rect.h       = %d\n", destinationRect.h);
-  // printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-
   if (SDL_RenderCopyEx(
           renderer, texture, sourceRect, &destinationRect,
           (ori - camera->GetOri()) * Math::DEG_PER_RAD,
@@ -145,29 +122,28 @@ void ViewAble::RunViewAble()
   // TODO: Ensure this orientation feature works properly.
 }
 
-// void ViewAble::RunViewAbleAt(float posX, float posY)
-// {
+void ViewAble::RunViewAbleAt(float posX, float posY)
+{
 
-//   SDL_Rect const destinationRect{
-//       (int)(0.5 * (camera->GetDimX() - dim.x * camera->GetViewDimX()) + pos.x * worldDim->x - camera->GetPosX()),
-//       (int)(0.5 * (camera->GetDimY() - dim.y * worldDim->y) + pos.y * worldDim->y - camera->GetPosY()),
-//       (int)(dim.x * worldDim->x),
-//       (int)(dim.y * worldDim->x)};
-//   // Draw the viewAble.
-//   if (SDL_RenderCopyEx(
-//           renderer, texture, sourceRect, &destinationRect,
-//           (ori - camera->GetOri()) * Math::DEG_PER_RAD,
-//           NULL, SDL_FLIP_NONE) != 0)
-//   {
-//     SDL_Log("ERROR - SDL_RenderCopyEx: %s\n", SDL_GetError());
-//   }
-//   // TODO: Ensure this orientation feature works properly.
-//   //taken
-// }
+  // printf("%f, %f, %f, %f\n", pos.x, pos.y, dim.x, dim.y);
+  float cx = 0.5 + posX - camera->GetPosX();
+  float cy = 0.5 + posY - camera->GetPosY();
+  //cx is same as pos x
+  if (cx - 0.5 * dim.x > 1 || cx + 0.5 * dim.x < 0 || cy - 0.5 * dim.y > 1 || cy + 0.5 * dim.y < 0)
+  {
+    return;
+  }
+  // printf("%f, %f\n", cx, cy);
+  // Define the viewAble's bounding destination rectangle.
+  SDL_Rect const destinationRect{
+      (int)(camera->GetViewDimX() * (cx - dim.x * 0.5)), //cx
+      (int)(camera->GetViewDimY() * (cy - dim.y * 0.5)), //cy
+      (int)(camera->GetViewDimX() * dim.x),
+      (int)(camera->GetViewDimY() * dim.y)};
+}
 
 void ViewAble::SetSourceRect(int x, int y, int width, int height)
 {
-  //assuming in %
   printf("      ViewAble::SetSourceRect()\n");
   sourceRect->x = x;
   sourceRect->y = y;

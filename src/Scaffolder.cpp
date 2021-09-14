@@ -6,6 +6,8 @@
 #include <fstream>
 #include <sstream>
 
+// TYM SAYS:  Scaffolder.cpp - I didn't look at this.
+
 using namespace Game;
 using namespace Config::Scaffolder;
 using namespace std;

@@ -3,6 +3,8 @@
 #include "RotateAble.hpp"
 #include "TranslateAble.hpp"
 
+// TYM SAYS: Camera.hpp - Didn't make any changes, but needs some clean-up.
+
 namespace Game
 {
   // Camera "sees" the portion of the model world to be graphically rendered.

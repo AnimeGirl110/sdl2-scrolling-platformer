@@ -1,11 +1,13 @@
 #pragma once
+#include "AccTransAble.hpp"
 #include "Actor.hpp"
 #include "KeyAble.hpp"
 #include "MouseAble.hpp"
 #include "RotateAble.hpp"
 #include "TranslateAble.hpp"
-#include "AccTransAble.hpp"
 #include "ViewAble.hpp"
+
+// TYM SAYS:  Player.hpp - Didn't make any changes, but needs some clean-up.
 
 namespace Game
 {

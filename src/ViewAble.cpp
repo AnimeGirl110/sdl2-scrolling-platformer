@@ -8,14 +8,10 @@
 #include "Vec2i.hpp"
 #include "ViewAble.hpp"
 
-using namespace Game;
+// TYM SAYS:  ViewAble.cpp - Moved initialization of static variables to hpp.
+// Removed stale, commented-out code.
 
-// Static variables must be initialized in cpp code outside of hpp declaration.
-Camera *ViewAble::camera = nullptr;
-SDL_Renderer *ViewAble::renderer = nullptr;
-std::unordered_map<char const *, SDL_Texture *> ViewAble::textures;
-std::vector<ViewAble *> ViewAble::viewAbles;
-// Vec2i *worldDim = nullptr;
+using namespace Game;
 
 void ViewAble::DestroyTextures()
 {
@@ -33,7 +29,6 @@ void ViewAble::DestroyTextures()
 
 void ViewAble::RunAll()
 {
-  // printf("RENDERER: %p\n", renderer); // TODO: Remove after testing.
   for (auto viewAble : viewAbles)
   {
     viewAble->RunViewAble();
@@ -59,12 +54,6 @@ void ViewAble::SetRenderer(SDL_Renderer *renderer)
     viewAble->SetTexture();
   }
 }
-
-// void ViewAble::SetWorldDim(Vec2i *vect)
-// {
-//   //sets the worldDim to the screen's dimensions.
-//   ViewAble::worldDim = vect;
-// }
 
 ViewAble::ViewAble(Vec2f &pos, float &ori, Vec2f &dim,
                    char const *fileName)
@@ -101,11 +90,11 @@ void ViewAble::RunViewAble()
   float cx = 0.5 + pos.x - camera->GetPosX();
   float cy = 0.5 + pos.y - camera->GetPosY();
   //cx is same as pos x
-  if (cx - 0.5 * dim.x > 1 || cx + 0.5 * dim.x < 0 || cy - 0.5 * dim.y > 1 || cy + 0.5 * dim.y < 0)
+  if (cx - 0.5 * dim.x > 1 || cx + 0.5 * dim.x < 0 ||
+      cy - 0.5 * dim.y > 1 || cy + 0.5 * dim.y < 0)
   {
     return;
   }
-  // printf("%f, %f\n", cx, cy);
   // Define the viewAble's bounding destination rectangle.
   SDL_Rect const destinationRect{
       (int)(camera->GetViewDimX() * (cx - dim.x * 0.5)), //cx
@@ -124,16 +113,14 @@ void ViewAble::RunViewAble()
 
 void ViewAble::RunViewAbleAt(float posX, float posY)
 {
-
-  // printf("%f, %f, %f, %f\n", pos.x, pos.y, dim.x, dim.y);
   float cx = 0.5 + posX - camera->GetPosX();
   float cy = 0.5 + posY - camera->GetPosY();
   //cx is same as pos x
-  if (cx - 0.5 * dim.x > 1 || cx + 0.5 * dim.x < 0 || cy - 0.5 * dim.y > 1 || cy + 0.5 * dim.y < 0)
+  if (cx - 0.5 * dim.x > 1 || cx + 0.5 * dim.x < 0 ||
+      cy - 0.5 * dim.y > 1 || cy + 0.5 * dim.y < 0)
   {
     return;
   }
-  // printf("%f, %f\n", cx, cy);
   // Define the viewAble's bounding destination rectangle.
   SDL_Rect const destinationRect{
       (int)(camera->GetViewDimX() * (cx - dim.x * 0.5)), //cx

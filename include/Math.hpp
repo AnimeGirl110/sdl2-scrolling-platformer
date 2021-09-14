@@ -1,5 +1,7 @@
 #pragma once
 
+// TYM SAYS:  Math.hpp - I didn't look at this.
+
 // Namespace containing customized math functions and variables.
 namespace Math
 {

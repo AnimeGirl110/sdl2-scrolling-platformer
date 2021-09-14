@@ -1,29 +1,27 @@
-obj/Background.o: src\Background.cpp include\Background.hpp \
-  include\Actor.hpp include\Model.hpp include\Vec2f.hpp \
-  include\World.hpp include\TranslateAble.hpp include\ModelAble.hpp \
-  include\ViewAble.hpp include\Config.hpp include\World.hpp \
-  include\Camera.hpp include\RotateAble.hpp
+obj/Background.o: src/Background.cpp include/Background.hpp \
+  include/Actor.hpp include/Model.hpp include/Vec2f.hpp \
+  include/World.hpp include/TranslateAble.hpp include/ModelAble.hpp \
+  include/ViewAble.hpp include/Camera.hpp include/RotateAble.hpp \
+  include/Config.hpp
 
-include\Background.hpp:
+include/Background.hpp:
 
-include\Actor.hpp:
+include/Actor.hpp:
 
-include\Model.hpp:
+include/Model.hpp:
 
-include\Vec2f.hpp:
+include/Vec2f.hpp:
 
-include\World.hpp:
+include/World.hpp:
 
-include\TranslateAble.hpp:
+include/TranslateAble.hpp:
 
-include\ModelAble.hpp:
+include/ModelAble.hpp:
 
-include\ViewAble.hpp:
+include/ViewAble.hpp:
 
-include\Config.hpp:
+include/Camera.hpp:
 
-include\World.hpp:
+include/RotateAble.hpp:
 
-include\Camera.hpp:
-
-include\RotateAble.hpp:
+include/Config.hpp:

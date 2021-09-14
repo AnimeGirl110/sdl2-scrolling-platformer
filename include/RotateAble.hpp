@@ -1,6 +1,8 @@
 #pragma once
 #include "ModelAble.hpp"
 
+// TYM SAYS:  RotateAble.hpp looks good.
+
 namespace Game
 {
   // Component-class for actors capable of rotating.

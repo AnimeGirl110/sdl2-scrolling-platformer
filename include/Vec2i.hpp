@@ -1,5 +1,7 @@
 #pragma once
 
+// TYM SAYS:  Vec2i.hpp looks good.
+
 namespace Game
 {
   // Structure comprising a 2D integer vector.

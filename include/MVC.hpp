@@ -4,6 +4,8 @@
 #include "Vec2i.hpp"
 #include "View.hpp"
 
+// TYM SAYS:  MVC.hpp looks good. Modified a comment.
+
 namespace Game
 {
   // Class implementing the model-view-controller paradigm.
@@ -19,7 +21,7 @@ namespace Game
     void Resize(int width, int height);
     // Code to run each application cycle.
     void Run();
-    // Informs View of the camera to be shared by all viewAbles.
+    // Informs View which camera to use.
     void SetCamera(class Camera *camera);
     // Stops the game from cycling.
     void Stop();

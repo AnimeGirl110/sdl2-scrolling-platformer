@@ -5,6 +5,8 @@
 #include <string>
 #include "Vec2i.hpp"
 
+// TYM SAYS:  Scaffolder.hpp - I didn't look at this.
+
 namespace Game
 {
   class Scaffolder

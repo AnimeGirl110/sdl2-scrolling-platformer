@@ -5,6 +5,8 @@
 #include "MVC.hpp"
 #include <SDL2/SDL.h>
 
+// TYM SAYS:  Controller.cpp looks good. Deleted a commented-out command.
+
 using namespace Game;
 using namespace Config::Controller;
 
@@ -33,7 +35,6 @@ void Controller::Resize(int width, int height)
 {
   printf("  Controller::Resize()\n");
   // Current version of Controller has nothing to do when screen is resized.
-  // mvc->FinishResizingController();
 }
 
 void Controller::Run()

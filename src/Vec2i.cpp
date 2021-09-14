@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "Vec2i.hpp"
 
+// TYM SAYS:  Vec2i.cpp looks good.
+
 using namespace Game;
 
 Vec2i::Vec2i(int x, int y)

@@ -3,6 +3,8 @@
 #include "TranslateAble.hpp"
 #include "ViewAble.hpp"
 
+// TYM SAYS:  Platform.hpp - I didn't look at this.
+
 namespace Game
 {
   // Base class of all Platforms in the game

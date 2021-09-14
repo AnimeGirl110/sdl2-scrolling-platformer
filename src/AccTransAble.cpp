@@ -1,7 +1,9 @@
 #include "AccTransAble.hpp"
+#include <math.h>
 #include <stdio.h>
 #include "TranslateAble.hpp"
-#include <math.h>
+
+// TYM SAYS:  AccTransAble.cpp - Looks fine.
 
 using namespace Game;
 

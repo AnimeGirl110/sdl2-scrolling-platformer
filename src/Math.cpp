@@ -3,6 +3,9 @@
 #include <stdlib.h>
 #include <time.h>
 
+// TYM SAYS:  Math.cpp - I didn't look at this.
+
+
 // TODO: Is <cmath> needed for PI2?  Doesn't seem to be.
 
 float const Math::DEG_PER_RAD = 180 / 3.14159;

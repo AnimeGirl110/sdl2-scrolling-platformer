@@ -2,6 +2,9 @@
 #include <SDL2/SDL.h>
 #include <vector>
 
+// TYM SAYS:  KeyAble.hpp - Declared static variables to be inline,
+// so that they can be initialized in the hpp file rather than cpp.
+
 namespace Game
 {
   // Component-class for actors capable of responding to keyboard's state.
@@ -21,8 +24,8 @@ namespace Game
 
   protected:
     // Static vector-collection of pointers to all keyAbles in the game.
-    static std::vector<KeyAble *> keyAbles;
+    inline static std::vector<KeyAble *> keyAbles;
     // Static pointer to current keyState for sharing by all keyAble components.
-    static Uint8 const *keyState;
+    inline static Uint8 const *keyState = nullptr;
   };
 }

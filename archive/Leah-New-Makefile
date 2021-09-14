@@ -3,7 +3,7 @@
 
 # PROJECT FOLDERS
 BLD_DIR := build
-EMS_DIR := /home/tym/emsdk/upstream/emscripten
+EMS_DIR := C:/Users/gcyua/OneDrive/Documents/Projects/WebAssemblyProjects/emsdk/upstream/emscripten
 EMS_EMS := $(EMS_DIR)/system/include
 EMS_SDL := $(EMS_DIR)/cache/sysroot/include
 IMG_DIR := images
@@ -51,11 +51,12 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR)
 	$(COMP) $(INC) $(COMP_FLAGS) -c $< -o $@
 
 $(PUB_DIR) $(OBJ_DIR):
-	mkdir -p $@ && cp -a --force --recursive $(BLD_DIR)/public $(PUB_DIR)
+	mkdir $@
+	Xcopy $(BLD_DIR)\public $(PUB_DIR) /S /E /H /Y
 
 # MAKE CLEAN
 clean:
-	@$(RM) -rv $(PUB_DIR) $(OBJ_DIR)
+	rmdir $(PUB_DIR) $(OBJ_DIR) /S /Q
 
 # MAKE GIT
 git:
@@ -66,7 +67,6 @@ git:
 # MAKE RUN
 run:
 	emrun --browser chrome $(PUB_DIR)/index.html
-#--killstart has been omitted, to avoid closing the browser each time
 
 # INCLUDE GENERATED MAKEFILES
 -include $(OBJ:.o=.d)

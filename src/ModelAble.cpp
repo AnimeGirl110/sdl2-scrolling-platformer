@@ -2,11 +2,9 @@
 #include <stdio.h>
 #include "ModelAble.hpp"
 
-using namespace Game;
+// TYM SAYS:  ModelAble.cpp - Moved initialization of static variables to hpp.
 
-// Static variables must be initialized in cpp code outside of hpp declaration.
-std::vector<ModelAble *> ModelAble::modelAbles;
-int ModelAble::timeChange = 0;
+using namespace Game;
 
 // Static function called by the model to run all modelAble actors in the game.
 void ModelAble::RunAll(int timeChange)

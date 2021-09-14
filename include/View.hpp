@@ -2,6 +2,8 @@
 #include <SDL2/SDL.h>
 #include "Vec2i.hpp"
 
+// TYM SAYS:  View.hpp looks good.
+
 namespace Game
 {
   // Class for managing rendering in the Model-View-Controller paradigm.

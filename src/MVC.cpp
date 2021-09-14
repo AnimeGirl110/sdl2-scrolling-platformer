@@ -3,6 +3,8 @@
 #include "MVC.hpp"
 #include <stdio.h>
 
+// TYM SAYS:  MVC.cpp looks good.
+
 using namespace Game;
 
 // Declare run(), which is defined in Main.cpp & referenced in MVC::Initialize.

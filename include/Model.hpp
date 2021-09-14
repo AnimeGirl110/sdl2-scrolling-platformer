@@ -1,7 +1,9 @@
 #pragma once
 #include <SDL2/SDL.h>
-// #include "Vec2i.hpp"
 #include <vector>
+
+// TYM SAYS:  Model.hpp - Deleted stale old commented lines.
+// Didn't make any other changes, but needs some clean-up.
 
 namespace Game
 {
@@ -49,8 +51,6 @@ namespace Game
     class Background *background;
     // Pointer to game's primary camera.
     class Camera *camera;
-    // Reference to the screen's dimensions, stored on the parent MVC object.
-    // Vec2i &dim;
     // Indicates whether there has already been a prior resize event.
     bool hasBeenResized;
     // Vector of pointers to all platform actors in the game.

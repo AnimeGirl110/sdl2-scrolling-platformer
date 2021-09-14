@@ -1,59 +1,50 @@
-obj/Model.o: src\Model.cpp include\Actor.hpp include\Model.hpp \
-  include\Vec2f.hpp include\World.hpp include\Background.hpp \
-  include\Actor.hpp include\TranslateAble.hpp include\ModelAble.hpp \
-  include\ViewAble.hpp include\Camera.hpp include\RotateAble.hpp \
-  include\Config.hpp include\Platform.hpp include\Model.hpp \
-  include\ModelAble.hpp include\MVC.hpp include\Controller.hpp \
-  include\Vec2i.hpp include\View.hpp include\Player.hpp \
-  include\KeyAble.hpp include\MouseAble.hpp include\AccTransAble.hpp \
-  include\Scaffolder.hpp include\World.hpp
+obj/Model.o: src/Model.cpp include/Actor.hpp include/Model.hpp \
+  include/Vec2f.hpp include/World.hpp include/Background.hpp \
+  include/TranslateAble.hpp include/ModelAble.hpp include/ViewAble.hpp \
+  include/Camera.hpp include/RotateAble.hpp include/Config.hpp \
+  include/MVC.hpp include/Controller.hpp include/Vec2i.hpp \
+  include/View.hpp include/Platform.hpp include/Player.hpp \
+  include/AccTransAble.hpp include/KeyAble.hpp include/MouseAble.hpp \
+  include/Scaffolder.hpp
 
-include\Actor.hpp:
+include/Actor.hpp:
 
-include\Model.hpp:
+include/Model.hpp:
 
-include\Vec2f.hpp:
+include/Vec2f.hpp:
 
-include\World.hpp:
+include/World.hpp:
 
-include\Background.hpp:
+include/Background.hpp:
 
-include\Actor.hpp:
+include/TranslateAble.hpp:
 
-include\TranslateAble.hpp:
+include/ModelAble.hpp:
 
-include\ModelAble.hpp:
+include/ViewAble.hpp:
 
-include\ViewAble.hpp:
+include/Camera.hpp:
 
-include\Camera.hpp:
+include/RotateAble.hpp:
 
-include\RotateAble.hpp:
+include/Config.hpp:
 
-include\Config.hpp:
+include/MVC.hpp:
 
-include\Platform.hpp:
+include/Controller.hpp:
 
-include\Model.hpp:
+include/Vec2i.hpp:
 
-include\ModelAble.hpp:
+include/View.hpp:
 
-include\MVC.hpp:
+include/Platform.hpp:
 
-include\Controller.hpp:
+include/Player.hpp:
 
-include\Vec2i.hpp:
+include/AccTransAble.hpp:
 
-include\View.hpp:
+include/KeyAble.hpp:
 
-include\Player.hpp:
+include/MouseAble.hpp:
 
-include\KeyAble.hpp:
-
-include\MouseAble.hpp:
-
-include\AccTransAble.hpp:
-
-include\Scaffolder.hpp:
-
-include\World.hpp:
+include/Scaffolder.hpp:

@@ -1,38 +1,38 @@
-obj/Platform.o: src\Platform.cpp include\Config.hpp include\Platform.hpp \
-  include\Actor.hpp include\Model.hpp include\Vec2f.hpp \
-  include\World.hpp include\TranslateAble.hpp include\ModelAble.hpp \
-  include\ViewAble.hpp include\Player.hpp include\KeyAble.hpp \
-  include\MouseAble.hpp include\RotateAble.hpp include\AccTransAble.hpp \
-  include\Camera.hpp include\Math.hpp
+obj/Platform.o: src/Platform.cpp include/Config.hpp include/Platform.hpp \
+  include/Actor.hpp include/Model.hpp include/Vec2f.hpp \
+  include/World.hpp include/TranslateAble.hpp include/ModelAble.hpp \
+  include/ViewAble.hpp include/Player.hpp include/AccTransAble.hpp \
+  include/KeyAble.hpp include/MouseAble.hpp include/RotateAble.hpp \
+  include/Camera.hpp include/Math.hpp
 
-include\Config.hpp:
+include/Config.hpp:
 
-include\Platform.hpp:
+include/Platform.hpp:
 
-include\Actor.hpp:
+include/Actor.hpp:
 
-include\Model.hpp:
+include/Model.hpp:
 
-include\Vec2f.hpp:
+include/Vec2f.hpp:
 
-include\World.hpp:
+include/World.hpp:
 
-include\TranslateAble.hpp:
+include/TranslateAble.hpp:
 
-include\ModelAble.hpp:
+include/ModelAble.hpp:
 
-include\ViewAble.hpp:
+include/ViewAble.hpp:
 
-include\Player.hpp:
+include/Player.hpp:
 
-include\KeyAble.hpp:
+include/AccTransAble.hpp:
 
-include\MouseAble.hpp:
+include/KeyAble.hpp:
 
-include\RotateAble.hpp:
+include/MouseAble.hpp:
 
-include\AccTransAble.hpp:
+include/RotateAble.hpp:
 
-include\Camera.hpp:
+include/Camera.hpp:
 
-include\Math.hpp:
+include/Math.hpp:

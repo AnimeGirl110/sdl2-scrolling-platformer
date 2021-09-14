@@ -1,6 +1,8 @@
 #pragma once
 #include "Vec2f.hpp"
 
+// TYM SAYS: World.hpp - Didn't make any changes, but needs some clean-up.
+
 namespace Game
 {
   // World contains information about the game's boundaries.

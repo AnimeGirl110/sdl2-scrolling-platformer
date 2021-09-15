@@ -1,5 +1,7 @@
 #pragma once
 
+// TYM SAYS:  Vec2f.hpp looks good.
+
 namespace Game
 {
   // Structure comprising a 2D floating-point vector.

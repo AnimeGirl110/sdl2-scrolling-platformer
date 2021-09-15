@@ -3,6 +3,9 @@
 #include <stdio.h>
 #include "TranslateAble.hpp"
 
+// TYM SAYS:  TranslateAble.hpp - Changed the RunModelAble to remove
+// multiplication by 0.01.
+
 using namespace Game;
 
 TranslateAble::TranslateAble(Actor *actor, float speed, float traj)
@@ -96,6 +99,10 @@ void TranslateAble::SetVelY(float vy)
 void TranslateAble::RunModelAble()
 {
   // TimeChange is stored statically on ModelAble.
-  actor->ChangePos(vel.x * timeChange * 0.01, vel.y * timeChange * 0.01);
-  //TODO: change these ^ into percentages?
+  actor->ChangePos(vel.x * timeChange, vel.y * timeChange);
+  // TYM SAYS:  I didn't see any reason why these velocities are being
+  // multiplied by 0.01. So I deleted those multiples.
+  // The velocities should be adjusted as necessary in the config file,
+  // instead of adjusting them here.
+  // TYM SAYS:  I don't think so. TODO: change these ^ into percentages?
 }

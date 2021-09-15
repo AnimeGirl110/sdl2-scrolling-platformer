@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include "World.hpp"
 
+// TYM SAYS: World.cpp - Didn't make any changes, but needs some clean-up.
+
 using namespace Game;
 
 World::World(float dimX, float dimY)

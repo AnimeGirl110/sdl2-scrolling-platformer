@@ -1,31 +1,31 @@
-obj/Player.o: src\Player.cpp include\Config.hpp include\Player.hpp \
-  include\Actor.hpp include\Model.hpp include\Vec2f.hpp \
-  include\World.hpp include\KeyAble.hpp include\MouseAble.hpp \
-  include\RotateAble.hpp include\ModelAble.hpp include\TranslateAble.hpp \
-  include\AccTransAble.hpp include\ViewAble.hpp
+obj/Player.o: src/Player.cpp include/Config.hpp include/Player.hpp \
+  include/AccTransAble.hpp include/ModelAble.hpp include/Vec2f.hpp \
+  include/Actor.hpp include/Model.hpp include/World.hpp \
+  include/KeyAble.hpp include/MouseAble.hpp include/RotateAble.hpp \
+  include/TranslateAble.hpp include/ViewAble.hpp
 
-include\Config.hpp:
+include/Config.hpp:
 
-include\Player.hpp:
+include/Player.hpp:
 
-include\Actor.hpp:
+include/AccTransAble.hpp:
 
-include\Model.hpp:
+include/ModelAble.hpp:
 
-include\Vec2f.hpp:
+include/Vec2f.hpp:
 
-include\World.hpp:
+include/Actor.hpp:
 
-include\KeyAble.hpp:
+include/Model.hpp:
 
-include\MouseAble.hpp:
+include/World.hpp:
 
-include\RotateAble.hpp:
+include/KeyAble.hpp:
 
-include\ModelAble.hpp:
+include/MouseAble.hpp:
 
-include\TranslateAble.hpp:
+include/RotateAble.hpp:
 
-include\AccTransAble.hpp:
+include/TranslateAble.hpp:
 
-include\ViewAble.hpp:
+include/ViewAble.hpp:

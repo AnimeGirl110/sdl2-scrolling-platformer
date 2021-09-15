@@ -3,6 +3,8 @@
 #include "Player.hpp"
 #include <stdio.h>
 
+// TYM SAYS:  Player.cpp - Didn't make any changes, but needs some clean-up.
+
 using namespace Game;
 using namespace Config::Actor::Player;
 

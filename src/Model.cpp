@@ -1,17 +1,20 @@
 #include "Actor.hpp"
-// #include "Asteroid.hpp"
+#include <algorithm>
 #include "Background.hpp"
 #include "Camera.hpp"
 #include "Config.hpp"
-#include "Platform.hpp"
 #include "Model.hpp"
 #include "ModelAble.hpp"
 #include "MVC.hpp"
+#include "Platform.hpp"
 #include "Player.hpp"
 #include "Scaffolder.hpp"
 #include <stdio.h>
 #include "World.hpp"
-#include <algorithm>
+
+// TYM SAYS:  Model.cpp - Deleted stale old commented lines.
+// Deleted code mentioning pastPosX on the background, as unnecessary.
+// Didn't make any other changes, but needs some clean-up.
 
 using namespace Game;
 using namespace Config::Model;
@@ -19,8 +22,6 @@ using namespace Config::Model;
 Model::Model(MVC *mvc)
     : background(nullptr),
       camera(nullptr),
-      // dim(mvc->GetDim()),
-      // hasBeenResized(false),
       mvc(mvc),
       player(nullptr),
       scaffolder(nullptr),
@@ -152,15 +153,6 @@ void Model::Finalize()
     player = nullptr;
   }
 
-  // // Delete the asteroids
-  // for (auto asteroid : asteroids)
-  // {
-  //   printf("\n  - DELETE ASTEROID\n");
-  //   delete asteroid;
-  //   asteroid = nullptr;
-  // }
-  // asteroids.clear();
-
   // Delete the platforms
   for (auto platform : platforms)
   {
@@ -222,7 +214,6 @@ void Model::MakeInitialActors()
   camera = new Camera(0, 0.5f, 0, 1.0f, 1.0f, player);
   // Inform mvc of the camera. Mvc passes it to view, which passes to viewAbles.
   mvc->SetCamera(camera);
-  background->pastPosX = camera->GetPosX();
 
   // Create the scaffolder.
   // printf("\n  + NEW SCAFFOLDER\n");

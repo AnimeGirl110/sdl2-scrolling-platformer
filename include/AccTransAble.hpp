@@ -2,6 +2,8 @@
 #include "ModelAble.hpp"
 #include "Vec2f.hpp"
 
+// TYM SAYS:  AccTransAble.hpp - Looks fine.
+
 namespace Game
 {
   // Component-class for actors capable of being translationally accelerated.

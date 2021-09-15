@@ -1,14 +1,10 @@
 #include <algorithm>
-#include <stdio.h>
 #include "MouseAble.hpp"
+#include <stdio.h>
 
-//OK
+// TYM SAYS:  MouseAble.cpp - Moved initialization of static variables to hpp.
 
 using namespace Game;
-
-// Static variables must be initialized in cpp code outside of hpp declaration.
-SDL_Event *MouseAble::event = nullptr;
-std::vector<MouseAble *> MouseAble::mouseAbles;
 
 void MouseAble::RunAll(SDL_Event *event)
 {

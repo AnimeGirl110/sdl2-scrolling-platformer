@@ -1,6 +1,8 @@
-#include <algorithm>
 #include "Actor.hpp"
+#include <algorithm>
 #include <stdio.h>
+
+// TYM SAYS:  Actor.cpp - Looks fine.
 
 using namespace Game;
 

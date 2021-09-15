@@ -1,7 +1,11 @@
 #pragma once
 #include <SDL2/SDL.h>
-#include <vector>
 #include <unordered_map>
+#include <vector>
+
+// TYM SAYS:  ViewAble.hpp - Declared static variables to be inline,
+// so that they can be initialized in the hpp file rather than cpp.
+// Also, corrected an erroneous comment and moved another to a new place.
 
 namespace Game
 {
@@ -11,12 +15,10 @@ namespace Game
   public:
     // Called by View to run all ViewAble components in the game.
     static void RunAll();
-    // Called by Model to set the active camera.
+    // Called by View to set the active camera.
     static void SetCamera(class Camera *camera);
     // Called by View to set the active renderer.
     static void SetRenderer(class SDL_Renderer *renderer);
-    //Called by View to set worldDim.
-    //static void SetWorldDim(struct Vec2i *vect);
 
     // Constructs a ViewAble component based on percents.
     ViewAble(struct Vec2f &pos, float &ori, struct Vec2f &dim,
@@ -40,20 +42,14 @@ namespace Game
     static void DestroyTextures();
 
     // Static vector collection of pointers to all viewAbles in the game.
-    static std::vector<ViewAble *> viewAbles;
-
-    // Static vector of the dimensions of the screen.
-    // static struct Vec2i *worldDim;
+    inline static std::vector<ViewAble *> viewAbles;
 
     // Static unordered_map collection of pointers to all loaded textures.
-    static std::unordered_map<char const *, class SDL_Texture *> textures;
-    /* Pointer to SDL_Rect representing boundaries within the image to render.
-     
-Note: Leave sourceRect as nullptr if entire image is to be rendered. */
+    inline static std::unordered_map<char const *, class SDL_Texture *> textures;
 
     // Reference to the ViewAble actor's dimensions.
     struct Vec2f &dim;
-    //
+    // File name of the ViewAble's image.
     char const *fileName;
     // Reference to the viewAble actor's orientation.
     float &ori;
@@ -62,9 +58,11 @@ Note: Leave sourceRect as nullptr if entire image is to be rendered. */
 
   protected:
     // Static pointer to camera being shared by all viewAbles when rendering.
-    static class Camera *camera;
+    inline static class Camera *camera = nullptr;
     // Static pointer to renderer being shared by all viewAbles.
-    static class SDL_Renderer *renderer;
+    inline static class SDL_Renderer *renderer = nullptr;
+    /* Pointer to SDL_Rect representing boundaries within the image to render.
+       Note: Leave sourceRect as nullptr if entire image is to be rendered. */
     SDL_Rect *sourceRect;
     // Pointer to the ViewAble actor's texture.
     class SDL_Texture *texture;

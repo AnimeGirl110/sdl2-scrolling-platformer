@@ -3,6 +3,11 @@
 #include "TranslateAble.hpp"
 #include "ViewAble.hpp"
 
+// TYM SAYS: Background.hpp - Made changes to fix erroneous rendering when
+// reach end of the image.
+// Deleted pastPosX as unnecessary.
+// Deleted stale commented-out code.
+
 namespace Game
 {
   class Background
@@ -16,16 +21,12 @@ namespace Game
     // Destructs a background
     ~Background();
 
-    // Overrides Actor's Resize() method.
-    // void Resize() override;
-
     // overrides background's viewable function.
     void RunViewAble() override;
 
     void RunModelAble() override;
 
     SDL_Rect sourceRect2;
-    // value of camera's past x-position -- to be used in calculations.
-    float pastPosX; //in public so model can see
+    int primaryImgWidth = 0; // TYM SAYS: Added this variable.
   };
 }

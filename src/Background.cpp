@@ -1,20 +1,24 @@
 #include "Background.hpp"
+#include "Camera.hpp"
 #include "Config.hpp"
 #include <stdio.h>
 #include "World.hpp"
-#include "Camera.hpp"
+
+// TYM SAYS: Background.cpp - Made changes to fix erroneous rendering when
+// reach end of the image.
+// Deleted pastPosX as unnecessary.
+// Deleted stale commented-out code.
 
 using namespace Game;
 using namespace Config::Actor::Background;
 
 Background::Background()
-    : Actor(0.5f, 0.5f, 0.0f, 1.0f, 2.0f),
+    : Actor(0.5f, 0.5f, 0.0f, 1.0f, 1.0f), // TYM SAYS: changed y-dimension to 1.0f
       TranslateAble(this, 0, 0),
       ViewAble(this->Actor::pos,
                this->Actor::ori,
                this->Actor::dim,
-               IMAGE_FILENAME),
-      pastPosX(0) //todo: camera doesn't exist when this is called?
+               IMAGE_FILENAME)
 {
   printf("    Background::Background()\n");
 
@@ -23,8 +27,6 @@ Background::Background()
 
   sourceRect = new SDL_Rect();
   this->ViewAble::SetSourceRect(0, 0, IMAGE_WIDTH / 3, IMAGE_HEIGHT);
-
-  // Resize();
 }
 
 Background::~Background()
@@ -41,64 +43,35 @@ Background::~Background()
   }
 }
 
-// void Background::RunViewAble()
-// { // printf("    Background::~RunViewAble()\n")
-//   /*TODO: check if (old) camera.pos.x -  (current) camera.pos.x > 1/2 screen dim |
-//        difference in pos.x is greater than 1/2 of background
-//     if so, create a new screen after it
-//     will this work? */
-//   if (this->camera->GetPosX() - pastPosX > this->world->GetDimX() * 0.5)
-//   {
-//     //assuming going forward
-//     pastPosX = this->camera->GetPosX();
-//     printf("\n~~~~~~~~~~~~~~~~~~~~~~~~ OVER HALF!\n");
-//     //TODO:
-//   }
-//   ViewAble::RunViewAble();
-//   // printf("\n%i, %i, \n", this->ViewAble::sourceRect->w, this->ViewAble::sourceRect->h);
-//   // printf("\n%f, %f, %f, %i\n", Actor::pos.x, Actor::pos.y, Actor::dim.x, Actor::dim.y);
-// }
-
+// TYM SAYS: Rewrote this using more descriptive variable names.
 void Background::RunModelAble()
 {
-  float b = (this->camera->GetPosX() - 0.5f) / 3.0f;
-  float c = b - (int)(b);
-  float left = c * 3; // left position.
-  if (left > 2.0f)
+  float camLeft = this->camera->GetPosX() - 0.5f;
+  float numImgRepeats = camLeft / 3.0f;
+  float camLeftPctImg = numImgRepeats - (int)numImgRepeats;
+  int imgLeft = (int)(camLeftPctImg * IMAGE_WIDTH);
+  if (camLeftPctImg > 0.66666)
   {
-    int leftPx = (int)(left * IMAGE_WIDTH / 3.0f);
-    int width = (int)(IMAGE_WIDTH / 3.0f * (3.0f - left));
-    this->ViewAble::SetSourceRect(leftPx, 0, width, IMAGE_HEIGHT);
-    sourceRect2 = SDL_Rect{0, 0, (int)(IMAGE_WIDTH / 3.0f - width), IMAGE_HEIGHT};
+    primaryImgWidth = (int)((1 - camLeftPctImg) * IMAGE_WIDTH);
+    this->ViewAble::SetSourceRect(imgLeft, 0, primaryImgWidth, IMAGE_HEIGHT);
+    sourceRect2 = SDL_Rect{0, 0, (int)(0.333333 * IMAGE_WIDTH - primaryImgWidth), IMAGE_HEIGHT};
   }
   else
   {
-    int leftPx = (int)(left * IMAGE_WIDTH / 3.0f);
-    int width = (int)(IMAGE_WIDTH / 3.0f);
-    this->ViewAble::SetSourceRect(leftPx, 0, width, IMAGE_HEIGHT);
+    primaryImgWidth = (int)(0.333333 * IMAGE_WIDTH);
+    this->ViewAble::SetSourceRect(imgLeft, 0, primaryImgWidth, IMAGE_HEIGHT);
     sourceRect2 = SDL_Rect{0, 0, 0, 0};
-  }
-
-  if (left < 0)
-  {
-    //gives us left edge of new image.
-    left += 2.0f;
-  }
-  else if (left > 2.0f)
-  {
-    left -= 2.0f;
   }
 }
 
+// TYM SAYS: Rewrote this using more descriptive variable names.
 void Background::RunViewAble()
 {
+  int w = (int)(3.0f * primaryImgWidth * camera->GetViewDimX() / IMAGE_WIDTH);
   // printf("%f, %f\n", cx, cy);
   // Define the viewAble's bounding destination rectangle.
-  SDL_Rect const destinationRect{
-      0, //cx
-      0, //cy
-      (int)(camera->GetViewDimX()) - sourceRect2.w,
-      (int)(camera->GetViewDimY())};
+  SDL_Rect const destinationRect{0, 0, w, (int)(camera->GetViewDimY())};
+
   if (SDL_RenderCopyEx(
           renderer, texture, sourceRect, &destinationRect,
           0,
@@ -106,11 +79,13 @@ void Background::RunViewAble()
   {
     SDL_Log("ERROR - SDL_RenderCopyEx: %s\n", SDL_GetError());
   }
+
   SDL_Rect const destinationRect2{
-      destinationRect.w, //cx
-      0,                 //cy
-      (int)(camera->GetViewDimX()),
+      destinationRect.w,
+      0,
+      (int)(camera->GetViewDimX() - w),
       (int)(camera->GetViewDimY())};
+
   if (SDL_RenderCopyEx(
           renderer, texture, &sourceRect2, &destinationRect2,
           0,
@@ -120,20 +95,3 @@ void Background::RunViewAble()
   }
   // TODO: Ensure this orientation feature works properly.
 }
-
-// void Background::Resize()
-// {
-//   printf("    Background::Resize()\n");
-//   float worldAspectRatio = world->GetDimX() / world->GetDimY();
-//   if (worldAspectRatio > ASPECT_RATIO)
-//   {
-//     SetSourceRect(0, 0,
-//                   IMAGE_WIDTH, (int)(IMAGE_WIDTH / worldAspectRatio + 0.5));
-//   }
-//   else
-//   {
-//     SetSourceRect(0, 0,
-//                   (int)(IMAGE_HEIGHT * worldAspectRatio + 0.5), IMAGE_HEIGHT);
-//   }
-//   SetDim(world->GetDimX(), world->GetDimY());
-// }

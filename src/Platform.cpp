@@ -6,7 +6,7 @@
 // #include "SDL/SDL.h"
 #include "Math.hpp"
 
-//OK
+// TYM SAYS:  Platform.cpp - I didn't look at this.
 
 using namespace Game;
 using namespace Config::Actor::Platform;

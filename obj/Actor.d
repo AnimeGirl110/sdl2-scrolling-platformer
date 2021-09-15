@@ -1,10 +1,10 @@
-obj/Actor.o: src\Actor.cpp include\Actor.hpp include\Model.hpp \
-  include\Vec2f.hpp include\World.hpp
+obj/Actor.o: src/Actor.cpp include/Actor.hpp include/Model.hpp \
+  include/Vec2f.hpp include/World.hpp
 
-include\Actor.hpp:
+include/Actor.hpp:
 
-include\Model.hpp:
+include/Model.hpp:
 
-include\Vec2f.hpp:
+include/Vec2f.hpp:
 
-include\World.hpp:
+include/World.hpp:

@@ -4,6 +4,8 @@
 #include <vector>
 #include "World.hpp"
 
+// TYM SAYS:  Actor.hpp - Looks fine.
+
 namespace Game
 {
   // Base class for game objects having dimension and position.

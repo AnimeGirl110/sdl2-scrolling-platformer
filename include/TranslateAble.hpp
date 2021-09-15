@@ -2,6 +2,8 @@
 #include "ModelAble.hpp"
 #include "Vec2f.hpp"
 
+// TYM SAYS:  TranslateAble.hpp - Looks fine.
+
 namespace Game
 {
   // Component-class for actors capable of translating (moving in x, y dims).

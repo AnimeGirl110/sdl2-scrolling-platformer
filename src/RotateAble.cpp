@@ -2,6 +2,8 @@
 #include "RotateAble.hpp"
 #include <stdio.h>
 
+// TYM SAYS:  RotateAble.cpp looks good.
+
 using namespace Game;
 
 RotateAble::RotateAble(class Actor *actor, float velA)

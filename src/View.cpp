@@ -5,6 +5,8 @@
 #include "View.hpp"
 #include "ViewAble.hpp"
 
+// TYM SAYS:  View.cpp looks good.
+
 // TODO: Does the SDL image subsystem need to be initialized and quit?
 
 using namespace Game;

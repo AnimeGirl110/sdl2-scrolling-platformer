@@ -1,6 +1,6 @@
 #include "MVC.hpp"
 
-//OK
+// TYM SAYS:  Main.cpp looks good.
 
 /* Note that defining mvc here invokes its constructor, which automatically
    kickstarts the initialization - run - finalization sequence. */

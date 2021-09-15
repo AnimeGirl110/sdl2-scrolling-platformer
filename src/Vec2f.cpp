@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "Vec2f.hpp"
 
+// TYM SAYS:  Vec2f.cpp looks good.
+
 using namespace Game;
 
 Vec2f::Vec2f(float x, float y)

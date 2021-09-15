@@ -2,6 +2,8 @@
 #include "Player.hpp"
 #include <stdio.h>
 
+// TYM SAYS: Camera.cpp - Didn't make any changes, but needs some clean-up.
+
 using namespace Game;
 
 //coordinates in %

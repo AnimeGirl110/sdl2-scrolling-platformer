@@ -1,6 +1,9 @@
 #pragma once
 #include <vector>
 
+// TYM SAYS:  ModelAble.hpp - Declared static variables to be inline,
+// so that they can be initialized in the hpp file rather than cpp.
+
 namespace Game
 {
   // Base component-class for actors that can be modeled (updated with time).
@@ -20,8 +23,8 @@ namespace Game
 
   protected:
     // Static vector-collection of pointers to all modelAbles in the game.
-    static std::vector<ModelAble *> modelAbles;
+    inline static std::vector<ModelAble *> modelAbles;
     // Static timeChange variable for sharing by all modelAble components.
-    static int timeChange;
+    inline static int timeChange = 0;
   };
 }

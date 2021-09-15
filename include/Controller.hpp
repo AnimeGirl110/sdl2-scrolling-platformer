@@ -1,6 +1,8 @@
 #pragma once
 #include "Vec2i.hpp"
 
+// TYM SAYS:  Controller.hpp looks good.
+
 namespace Game
 {
   // Class for managing user input in the Model-View-Controller paradigm.

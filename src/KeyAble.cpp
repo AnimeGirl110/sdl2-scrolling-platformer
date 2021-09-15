@@ -1,14 +1,10 @@
 #include <algorithm>
-#include <stdio.h>
 #include "KeyAble.hpp"
+#include <stdio.h>
 
-//OK
+// TYM SAYS:  KeyAble.cpp - Moved initialization of static variables to hpp.
 
 using namespace Game;
-
-// Static variables must be initialized in cpp code outside of hpp declaration.
-std::vector<KeyAble *> KeyAble::keyAbles;
-Uint8 const *KeyAble::keyState = nullptr;
 
 void KeyAble::RunAll(Uint8 const *keyState)
 {
